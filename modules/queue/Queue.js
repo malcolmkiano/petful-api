@@ -34,6 +34,9 @@ class Queue {
 
   show() {
     // Return the next item in the queue.
+    if (!this.first) {
+      return null;
+    }
     return this.first.value;
   }
 

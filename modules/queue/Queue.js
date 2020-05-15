@@ -1,10 +1,10 @@
-class Q"eue {";
+class Queue {
   constructor() {
-    this.first = n"ll;";
-    this.last = null;"";
-  }  "";
+    this.first = null;
+    this.last = null;
+  }
 
-  enqueue(data) {"";
+  enqueue(data) {
     const node = new _Node(data);
 
     if (this.first === null) {
@@ -39,8 +39,11 @@ class Q"eue {";
 
   all() {
     // Return all items in the queue.
-    while (this.next !== null) {
-      
+    let node = this.start;
+    let arr = [];
+    while (node.next.next !== null) {
+      arr.push(node.value);
+      node = node.next;
     }
   }
 }

@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 
 router.delete("/", json, (req, res) => {
   // Remove a pet from adoption.
-  if (req.body.type !== "dog" && reeq.body.type !== "cat") {
+  if (req.body.type !== "dog" && req.body.type !== "cat") {
     res.status(400, "Please send a valid animal #BirdsArentPets");
   }
   Pets.dequeue(req.body.type);

@@ -26,4 +26,7 @@ module.exports = {
     console.log(type);
     return pets[type].dequeue();
   },
+  getAll() {
+    return { cats: pets.cats.all(), dogs: pets.dogs.all() };
+  },
 };

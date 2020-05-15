@@ -23,7 +23,11 @@ module.exports = {
 
   dequeue(type) {
     // Remove a pet from the queue.
-    return pets[type].dequeue();
+    const pet = pets[type].dequeue();
+    if (!pets[type].show()) {
+      store[type].forEach((p) => pets[type].enqueue(p));
+    }
+    return pet;
   },
   getAll() {
     return { cats: pets.cats.all(), dogs: pets.dogs.all() };

@@ -40,3 +40,25 @@ describe("pets endpoints", () => {
     });
   });
 });
+describe("people endpoints", () => {
+  describe("get /people endpoint", () => {
+    it("responds with 200 and an array of all the people", () => {
+      return supertest(app)
+        .get("/people")
+        .expect(200)
+        .expect((res) => {
+          console.log(res.body);
+          expect(res.body).to.eql({
+            people: ["Randy Lahey", "Trevor Cory", "Jim Lahey"],
+          });
+        });
+    });
+
+    it("responds with 201 created", () => {
+      return supertest(app)
+        .post("/people")
+        .send({ name: "Bubbles" })
+        .expect(201);
+    });
+  });
+});

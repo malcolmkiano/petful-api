@@ -1,11 +1,10 @@
 # Petful Server
 
 </br>
-made by Malcom Kiano and Ian Drews 2020
+made by [Malcom Kiano](https://github.com/malcolmkiano) and [Ian Drews](https://github.com/MediocreIan) 2020
 </br>
 # Api endpoints
-</br>
-<h3>Api Endpoints</h3></br></br>
+</br></br>
 
 <h4>/pets<h4> </br>
 GET: returns a list of all pets currently up for adoption. this will be one of each type of pet i.e. one dog one cat. the format will be as follows.</br>
@@ -32,3 +31,7 @@ GET: returns all people currently in queue. The format is:</br>
 </br>
 POST: adds new people to the end of the queue. Request format is: </br>
 <code>{name: "Sam Smith"}</code>
+</br></br>
+
+#Stack
+made with express and NodeJs
